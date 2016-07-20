@@ -1,0 +1,132 @@
+description = "Registration Layout"
+==
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> {{ page.title }} </title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<meta name="description" content="Developed By M Abdur Rokib Promy">
+		<meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
+	    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href="{{ [
+			'assets/css/bootstrap.min.css',
+			'assets/css/font-awesome.min.css',
+			'assets/css/ionicons.min.css',
+			'assets/css/morris/morris.css',
+			'assets/css/jvectormap/jquery-jvectormap-1.2.2.css',
+			'assets/css/datepicker/datepicker3.css',
+			'assets/css/fullcalendar/fullcalendar.css',
+			'assets/css/daterangepicker/daterangepicker-bs3.css',
+			'assets/css/iCheck/all.css',
+			'assets/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
+      'assets/css/style.css',
+			'assets/css/registration.css',
+		]|theme }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://octobercms.com/combine/fc35b6ec1c8d290da2780065cb96fd98-1467497107">
+        <link href="https://octobercms.com/combine/744d05a05e046e180e835a18b4bfa296-1468287104" rel="stylesheet">
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="skin-black">
+		<!-- Main content -->
+        <section class="content">
+        	{% page %}
+        <div class="footer-main" style="
+    background: none;
+    border: none;
+    color: #ffffff;
+">
+            Copyright © {{ this.page.title }}, 2014
+        </div>
+        </section>
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+        <script type="text/javascript" src="{{[
+			'assets/javascripts/jquery-ui-1.10.3.min.js',
+			'assets/javascripts/bootstrap.min.js',
+			'assets/javascripts/plugins/daterangepicker/daterangepicker.js',
+			'assets/javascripts/plugins/chart.js',
+			'assets/javascripts/plugins/datepicker/bootstrap-datepicker.js',
+			'assets/javascripts/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+			'assets/javascripts/plugins/iCheck/icheck.min.js',
+			'assets/javascripts/plugins/fullcalendar/fullcalendar.js',
+			'assets/javascripts/Director/app.js',
+			'assets/javascripts/Director/dashboard.js'
+        ]|theme}}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+        <!-- Director for demo purposes -->
+        <script type="text/javascript">
+            $('input').on('ifChecked', function(event) {
+                // var element = $(this).parent().find('input:checkbox:first');
+                // element.parent().parent().parent().addClass('highlight');
+                $(this).parents('li').addClass("task-done");
+                console.log('ok');
+            });
+            $('input').on('ifUnchecked', function(event) {
+                // var element = $(this).parent().find('input:checkbox:first');
+                // element.parent().parent().parent().removeClass('highlight');
+                $(this).parents('li').removeClass("task-done");
+                console.log('not');
+            });
+
+        </script>
+        <script>
+            $('#noti-box').slimScroll({
+                height: '400px',
+                size: '5px',
+                BorderRadius: '5px'
+            });
+
+            $('input[type="checkbox"].flat-grey, input[type="radio"].flat-grey').iCheck({
+                checkboxClass: 'icheckbox_flat-grey',
+                radioClass: 'iradio_flat-grey'
+            });
+</script>
+<script type="text/javascript">
+    $(function() {
+                "use strict";
+                //BAR CHART
+                var data = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [
+                        {
+                            label: "My First dataset",
+                            fillColor: "rgba(220,220,220,0.2)",
+                            strokeColor: "rgba(220,220,220,1)",
+                            pointColor: "rgba(220,220,220,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(220,220,220,1)",
+                            data: [65, 59, 80, 81, 56, 55, 40]
+                        },
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(151,187,205,0.2)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(151,187,205,1)",
+                            data: [28, 48, 40, 19, 86, 27, 90]
+                        }
+                    ]
+                };
+            new Chart(document.getElementById("linechart").getContext("2d")).Line(data,{
+                responsive : true,
+                maintainAspectRatio: false,
+            });
+
+            });
+            // Chart.defaults.global.responsive = true;
+</script>
+    </body>
+</html>

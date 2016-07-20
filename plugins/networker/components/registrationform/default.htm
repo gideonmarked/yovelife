@@ -1,0 +1,138 @@
+<form class="form-horizontal tasi-form form-elements" role="form"
+	
+	data-request-confirm="Are you sure that the data you entered is correct?"
+>
+	<section class="panel">
+	  <header class="panel-heading">
+	  	Personal Profile
+	  </header>
+	  
+	  <div class="panel-body">
+	          <div class="form-group {% if errors.first('first_name') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Given Name</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="first_name" placeholder="Your Given Name"
+	                  value="{% if not errors.first('first_name') %} {{ values.first_name }} {% endif %}">
+	                  {% if errors.first('first_name') %}
+	                  <span class="help-block">{{ errors.first('first_name') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('last_name') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Last Name</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="last_name" placeholder="Your Last Name"
+	                  value="{% if not errors.first('last_name') %} {{ values.last_name }} {% endif %}">
+	                  {% if errors.first('last_name') %}
+	                  <span class="help-block">{{ errors.first('last_name') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('mobile_number') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Contact Number</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="mobile_number" placeholder="You can use your mobile or landline"
+	                  value="{% if not errors.first('mobile_number') %} {{ values.mobile_number }} {% endif %}">
+	                  {% if errors.first('mobile_number') %}
+	                  <span class="help-block">{{ errors.first('mobile_number') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	      
+	  </div>
+	</section>
+
+	<section class="panel">
+	  <header class="panel-heading">
+	  	User Credentials
+	  </header>
+	  <div class="panel-body">
+	   		  <div class="form-group{% if errors.first('username') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Username</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="username" placeholder="Your preferred username."
+	                  value="{% if not errors.first('username') %} {{ values.username }} {% endif %}">
+	                  {% if errors.first('username') %}
+	                  <span class="help-block">{{ errors.first('username') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('password') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Password</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="password" class="form-control" name="password" placeholder="A strong password.">
+	                  {% if errors.first('password') %}
+	                  <span class="help-block">{{ errors.first('password') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('repeat_password') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Repeat Password</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="password" class="form-control" name="repeat_password" placeholder="Just repeat the password.">
+	                  {% if errors.first('repeat_password') %}
+	                  <span class="help-block">{{ errors.first('repeat_password') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	  </div>
+	</section>
+
+	<section class="panel">
+	  <header class="panel-heading">
+	  	Account Information
+	  </header>
+	  <div class="panel-body">
+	          <div class="form-group{% if errors.first('referrer_code') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Referrer's Code</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="referrer_code" placeholder="The Account Code of the one who referred you."
+	                  value="{% if not errors.first('referrer_code') %}{{ values.referrer_code }}{% endif %}">
+	                  {% if errors.first('referrer_code') %}
+	                  <span class="help-block">{{ errors.first('referrer_code') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('placement_code') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Placement Code</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="placement_code" placeholder="The Account Code of the one connection for the binary network."
+	                  value="{% if not errors.first('placement_code') %}{{ values.placement_code }}{% endif %}">
+	                  {% if errors.first('placement_code') %}
+	                  <span class="help-block">{{ errors.first('placement_code') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          <div class="form-group{% if errors.first('ticket_code') %} has-error{% endif %}">
+	              <label class="col-lg-3 col-sm-3 control-label">Ticket Code</label>
+	              <div class="col-lg-9 col-sm-9">
+	                  <input type="text" class="form-control" name="ticket_code" placeholder="Acquired from purchasing tickets."
+	                  value="{% if not errors.first('ticket_code') %}{{ values.ticket_code }}{% endif %}">
+	                  {% if errors.first('ticket_code') %}
+	                  <span class="help-block">{{ errors.first('ticket_code') }}</span>
+	                  {% endif %}
+	              </div>
+	          </div>
+	          
+			  <div class="form-group{% if errors.first('package') %} has-error{% endif %}">
+			    <label class="col-lg-3 col-sm-3 control-label">Packages</label>
+	              <div class="col-lg-9 col-sm-9">	                  
+				  	{% if packages %}
+						{% for package in packages %}
+						<div class="radio">
+							<label>
+								<input type="radio" name="package" id="package" value="{{ package.code }}">
+								{{ package.code }} - [ PHP {{ package.amount|number_format(2,'.',',') }} ] - {{ package.description }}
+							</label>
+						</div>
+						{% endfor %}
+						<span class="help-block">{{ errors.first('package') }}</span>
+					{% endif %}
+				  </div>
+			  </div>
+			  <div class="col-lg-12 col-sm-12 text-center">
+			  	<button class="btn btn-success" type="submit">Create You Personal Account</button>
+			  </div>
+	  </div>
+	</section>
+</form>

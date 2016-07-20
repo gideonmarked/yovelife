@@ -1,0 +1,14 @@
+/*!
+ *   Director free version
+ *   Author: web-apps.ninja
+ *   License: Open source - MIT
+ *   Please visit http://opensource.org/licenses/MIT for more information
+!*/
+/*
+    Core: General style
+----------------------------
+*/
+.content {
+	background: url('../images/nature-background-images2.jpg');
+	background-size: cover;
+}
