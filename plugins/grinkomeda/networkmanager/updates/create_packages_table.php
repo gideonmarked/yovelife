@@ -8,15 +8,19 @@ class CreatePackagesTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_packages', function(Blueprint $table) {
+        Schema::create('_yovelife_packages', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('code',7);
+            $table->string('description',100);
+            $table->string('category',20);
+            $table->double('amount',15,2);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_packages');
+        Schema::dropIfExists('_yovelife_packages');
     }
 }

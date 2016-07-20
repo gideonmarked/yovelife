@@ -8,15 +8,19 @@ class CreatePurchaseHistoriesTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_purchase_histories', function(Blueprint $table) {
+        Schema::create('_yovelife_purchase_histories', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('account_id');
+            $table->integer('ticket_code',7);
+            $table->integer('head_id');
+            $table->integer('package_id');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_purchase_histories');
+        Schema::dropIfExists('_yovelife_purchase_histories');
     }
 }

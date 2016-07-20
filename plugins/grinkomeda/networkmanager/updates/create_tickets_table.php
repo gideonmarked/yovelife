@@ -8,15 +8,17 @@ class CreateTicketsTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_tickets', function(Blueprint $table) {
+        Schema::create('_yovelife_tickets', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('code',7);
+            $table->double('amount',15,2);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_tickets');
+        Schema::dropIfExists('_yovelife_tickets');
     }
 }

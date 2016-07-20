@@ -8,15 +8,18 @@ class CreateNodeHistoriesTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_node_histories', function(Blueprint $table) {
+        Schema::create('_yovelife_node_histories', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('node_id');
+            $table->integer('head_id');
+            $table->integer('pv');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_node_histories');
+        Schema::dropIfExists('_yovelife_node_histories');
     }
 }

@@ -1,4 +1,4 @@
-<?php namespace Grinkomeda\NetworkManager\Updates;
+`<?php namespace Grinkomeda\NetworkManager\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -8,15 +8,18 @@ class CreateAccountsTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_accounts', function(Blueprint $table) {
+        Schema::create('_yovelife_accounts', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('code,7');
+            $table->string('leader_code,7');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_accounts');
+        Schema::dropIfExists('_yovelife_accounts');
     }
 }

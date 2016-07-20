@@ -8,15 +8,20 @@ class CreateHeadsTable extends Migration
 {
     public function up()
     {
-        Schema::create('grinkomeda_networkmanager_heads', function(Blueprint $table) {
+        Schema::create('_yovelife_heads', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('head_id');
+            $table->integer('parent_id');
+            $table->boolean('shadow');
+            $table->integer('left_pv');
+            $table->integer('right_pv');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('grinkomeda_networkmanager_heads');
+        Schema::dropIfExists('_yovelife_heads');
     }
 }
