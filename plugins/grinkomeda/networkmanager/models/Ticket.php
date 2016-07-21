@@ -11,7 +11,7 @@ class Ticket extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_tickets';
+    public $table = '_yovelife_tickets';
 
     /**
      * @var array Guarded fields

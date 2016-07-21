@@ -11,7 +11,7 @@ class Account extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_accounts';
+    public $table = '_yovelife_accounts';
 
     /**
      * @var array Guarded fields
@@ -29,7 +29,9 @@ class Account extends Model
     public $hasOne = [
         'profile' => ['Grinkomeda\NetworkManager\Models\Profile'],
     ];
-    public $hasMany = [];
+    public $hasMany = [
+        'head' => ['Grinkomeda\NetworkManager\Models\Head'],
+    ];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];

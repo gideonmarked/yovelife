@@ -11,7 +11,7 @@ class Heads extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_heads';
+    public $table = '_yovelife_heads';
 
     /**
      * @var array Guarded fields

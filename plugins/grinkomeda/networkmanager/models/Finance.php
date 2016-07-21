@@ -11,7 +11,7 @@ class Finance extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_finances';
+    public $table = '_yovelife_finances';
 
     /**
      * @var array Guarded fields

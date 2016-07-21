@@ -2,6 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Rainlab\User\Models\User;
 
 /**
  * NetworkManager Plugin Information File
@@ -41,7 +42,9 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        User::extend(function($model){
+            $model->hasOne['account'] = ['Grinkomeda\Networker\Models\Account'];
+        });
     }
 
     /**
@@ -81,12 +84,11 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
 
         return [
             'networkmanager' => [
                 'label'       => 'NetworkManager',
-                'url'         => Backend::url('grinkomeda/networkmanager/mycontroller'),
+                'url'         => Backend::url('grinkomeda/networkmanager/packages'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['grinkomeda.networkmanager.*'],
                 'order'       => 500,

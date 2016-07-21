@@ -11,7 +11,7 @@ class Profile extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_profiles';
+    public $table = '_yovelife_profiles';
 
     /**
      * @var array Guarded fields

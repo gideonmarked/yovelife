@@ -42,7 +42,6 @@ class RegistrationForm extends ComponentBase
     public function onRegister()
     {
         
-       
     }
 
     public function registerUser($post)

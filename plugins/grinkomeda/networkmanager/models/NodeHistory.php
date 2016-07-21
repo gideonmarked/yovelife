@@ -11,7 +11,7 @@ class NodeHistory extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_node_histories';
+    public $table = '_yovelife_node_histories';
 
     /**
      * @var array Guarded fields

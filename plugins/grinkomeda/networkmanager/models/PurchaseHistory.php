@@ -11,7 +11,7 @@ class PurchaseHistory extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_purchase_histories';
+    public $table = '_yovelife_purchase_histories';
 
     /**
      * @var array Guarded fields

@@ -11,7 +11,7 @@ class Package extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grinkomeda_networkmanager_packages';
+    public $table = '_yovelife_packages';
 
     /**
      * @var array Guarded fields
