@@ -51,10 +51,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
 
         return [
-            'Grinkomeda\NetworkManager\Components\MyComponent' => 'myComponent',
+            'Grinkomeda\NetworkManager\Components\CreateAccountForm' => 'createAccountForm',
         ];
     }
 
