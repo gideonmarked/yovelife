@@ -12,9 +12,9 @@ class CreatePurchaseHistoriesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('account_id');
-            $table->integer('ticket_code',7);
             $table->integer('head_id');
             $table->integer('package_id');
+            $table->string('ticket_code',7);
             $table->timestamps();
         });
     }

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Package
+
+# Model Form Field configuration
+form: $/grinkomeda/networkmanager/models/package/fields.yaml
+
+# Model Class name
+modelClass: Grinkomeda\NetworkManager\Models\Package
+
+# Default redirect location
+defaultRedirect: grinkomeda/networkmanager/packages
+
+# Create page
+create:
+    title: Create Package
+    redirect: grinkomeda/networkmanager/packages/update/:id
+    redirectClose: grinkomeda/networkmanager/packages
+
+# Update page
+update:
+    title: Edit Package
+    redirect: grinkomeda/networkmanager/packages
+    redirectClose: grinkomeda/networkmanager/packages
+
+# Preview page
+preview:
+    title: Preview Package

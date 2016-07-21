@@ -26,7 +26,9 @@ class Account extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+        'profile' => ['Grinkomeda\NetworkManager\Models\Profile'],
+    ];
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [];

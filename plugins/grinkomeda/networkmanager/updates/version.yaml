@@ -1,1 +1,10 @@
 1.0.1: First version of NetworkManager
+1.0.2:
+    - create_accounts_table.php
+    - create_finances_table.php
+    - create_heads_table.php
+    - create_node_histories_table.php
+    - create_packages_table.php
+    - create_profiles_table.php
+    - create_purchase_histories_table.php
+    - create_tickets_table.php
