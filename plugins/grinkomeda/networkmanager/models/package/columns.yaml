@@ -6,3 +6,19 @@ columns:
     id:
         label: ID
         searchable: true
+
+    code:
+        label: Code
+        searchable: true
+
+    description:
+        label: Description
+        searchable: true
+
+    category:
+        label: Category
+        searchable: true
+
+    amount:
+        label: Amount
+        searchable: true

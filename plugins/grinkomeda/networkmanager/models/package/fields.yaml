@@ -6,3 +6,21 @@ fields:
     id:
         label: ID
         disabled: true
+
+    code:
+        label: Code
+        type: text
+
+    description:
+        label: Description
+        type: textarea
+
+    category:
+        label: Category
+        type: radio
+        options:
+            regular: Regular
+
+    amount:
+        label: Amount
+        type: number

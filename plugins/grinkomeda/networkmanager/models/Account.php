@@ -32,7 +32,9 @@ class Account extends Model
     public $hasMany = [
         'head' => ['Grinkomeda\NetworkManager\Models\Head'],
     ];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'user' => ['Rainlab\User\Models\User'],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
